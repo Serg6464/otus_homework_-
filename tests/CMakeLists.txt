@@ -21,9 +21,9 @@ add_executable(test_module tests.cc)
 target_compile_options(test_module PRIVATE -g -fprofile-arcs -ftest_coverage )
 
 # Link googleTest library
-target_link_libraries(test_module gcov
+target_link_libraries(test_module 
  PRIVATE
-  GTest::GTest
+  GTest::GTest gcov
   )
 # Include directrories with code to test
 include_directories(
