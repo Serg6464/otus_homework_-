@@ -18,7 +18,7 @@ Sample class tests
 --------------------------------------------------------------
 */
 // 3. тест проверяющий что для уравнения x^2-1=0 корней нет
-TEST(solve(1,0,-1), CheckNoRoots)
+TEST(DDD, CheckNoRoots)
 {
   //arrange
   double a = 1.0, b = 0.0, c=-1.0;
