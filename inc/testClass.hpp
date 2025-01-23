@@ -14,6 +14,10 @@ public:
 //нахождение корней квадратного уравнения вида ax^2+bx+c=0
     static std::vector <double> solve(double a, double b, double c)     
     {
+        if( !isfinite(a) || !isfinite(b) || !isfinite(c) )
+        {
+            throw "args not valid";
+        }
         if( fabs(a)< 10e-7 )
         {
             throw "a not valid";
