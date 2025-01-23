@@ -23,7 +23,7 @@ public:
             if( Discr > 0.0 )
             { // два корня
                 double x1 = -b + sqrt(Discr)/(2.0*a);
-                double x2 = -b + sqrt(Discr)/(2.0*a);
+                double x2 = -b - sqrt(Discr)/(2.0*a);
 
                 return std::vector <double> { x1, x2 };
             } else
