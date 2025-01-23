@@ -18,7 +18,7 @@ target_link_libraries(GTest::GTest INTERFACE gtest_main)
 # Create executable
 
 add_executable(test_module tests.cc)
-target_compile_options(test_module PRIVATE -g -fprofile-arcs -ftest_coverage )
+target_compile_options(test_module PRIVATE -g -fprofile-arcs -ftest-coverage )
 
 # Link googleTest library
 target_link_libraries(test_module 
