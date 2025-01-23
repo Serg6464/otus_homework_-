@@ -18,3 +18,5 @@ jobs:
       run: cd /home/runner/work/otus_homework_-/otus_homework_-/tests && cd build && make
     - name: Run Tests
       run: /home/runner/work/otus_homework_-/otus_homework_-/tests/build/test_module
+    - name: Check Coverage Result
+      run: cd /home/runner/work/otus_homework_-/otus_homework_-/tests && ctest -T coverage
