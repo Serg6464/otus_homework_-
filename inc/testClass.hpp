@@ -6,6 +6,7 @@
 */
 #include <string>
 #include <vector>
+#include <math.h>
 
 class TestClass
 {
@@ -13,7 +14,25 @@ public:
 //нахождение корней квадратного уравнения вида ax^2+bx+c=0
     static std::vector <double> solve(double a, double b, double c)     
     {
-        return std::vector<double> {};
+        double Discr = b*b - 4.0*a*c;
+        if( Discr < 0.0 )
+        {
+            return std::vector<double> {};
+        } else 
+        {
+            if( Discr > 0.0 )
+            { // два корня
+                double x1 = -b + sqrt(Discr)/(2.0*a);
+                double x2 = -b + sqrt(Discr)/(2.0*a);
+
+                return std::vector <double> { x1, x2 };
+            } else
+            {
+                //один корень
+                double x1 = -b/(2.0*a);
+                return std::vector <double> { x1 };
+            }
+        }
     }
 
     static std::string getLogo()
