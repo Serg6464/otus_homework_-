@@ -41,7 +41,7 @@ TEST(DDD, Check2Roots)
   auto retVal = TestClass::solve(a,b,c);
   //assert
   EXPECT_EQ( retVal.size(), etalonVal.size() );
-  for(int i=0; i<retVal.size; i++ )
+  for(int i=0; i<retVal.size(); i++ )
   { 
     EXPECT_DOUBLE_EQ(retVal[i],etalonVal[i]);
   }  
