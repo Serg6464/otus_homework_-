@@ -1,6 +1,8 @@
 /* --- Includes --- */
 #include <gtest/gtest.h>
 #include <iostream>
+#include <vector>
+
 /* --- User includes --- */
 #include "../inc/testClass.hpp"
 
@@ -22,7 +24,7 @@ TEST(DDD, CheckNoRoots)
 {
   //arrange
   double a = 1.0, b = 0.0, c=-1.0;
-  vector <double> etalonVal = {};
+  std::vector <double> etalonVal = {};
   //act
   auto retVal = TestClass::solve(a,b,c);
   //assert

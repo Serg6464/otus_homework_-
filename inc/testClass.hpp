@@ -11,9 +11,9 @@ class TestClass
 {
 public:
 //нахождение корней квадратного уравнения вида ax^2+bx+c=0
-    static vector <double> solve(double a, double b, double c)     
+    static std::vector <double> solve(double a, double b, double c)     
     {
-        return vector<double> {};
+        return std::vector<double> {};
     }
 
     static std::string getLogo()
