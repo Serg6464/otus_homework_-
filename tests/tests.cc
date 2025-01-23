@@ -72,3 +72,28 @@ TEST(DDD, CheckException_a_eq_0)
   //act, ASSERT
   EXPECT_ANY_THROW(TestClass::solve(a,b,c));
 }
+
+// 13. тест проверяющий что при a=0 exception
+TEST(DDD, CheckException_NAN_abc)
+{
+  //arrange
+  #define SUBTEST(ARGVARNAME, VALUE) \
+  {
+    double a = 0.0, b = 0.0, c=1.0;
+    ARGVARNAME = VALUE;\
+    EXPECT_ANY_THROW(TestClass::solve(a,b,c));  \
+  }
+
+  //act, ASSERT
+  SUBTEST( a, NAN);
+  SUBTEST( a, INFINITY);
+  SUBTEST( a, -INFINITY);
+
+  SUBTEST( b, NAN);
+  SUBTEST( b, INFINITY);
+  SUBTEST( b, -INFINITY);
+
+  SUBTEST( c, NAN);
+  SUBTEST( c, INFINITY);
+  SUBTEST( c, -INFINITY);
+}
