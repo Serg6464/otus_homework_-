@@ -24,7 +24,7 @@ TEST(DDD, CheckNoRoots)
   double a = 1.0, b = 0.0, c=-1.0;
   vector <double> etalonVal = {};
   //act
-  auto retVal = TestClass::solve(a,b);
+  auto retVal = TestClass::solve(a,b,c);
   //assert
   EXPECT_EQ(retVal,etalonVal);  
 }
