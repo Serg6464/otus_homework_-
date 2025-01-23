@@ -24,7 +24,7 @@ public:
             return std::vector<double> {};
         } else 
         {
-            if( Discr > 0.0 )
+            if( Discr > 10e-7 )
             { // два корня
                 double x1 = -b + sqrt(Discr)/(2.0*a);
                 double x2 = -b - sqrt(Discr)/(2.0*a);
