@@ -81,7 +81,7 @@ TEST(DDD, CheckException_NAN_abc)
   { \
     double a = 0.0, b = 0.0, c=1.0; \
     ARGVARNAME = VALUE;\
-    EXPECT_ANY_THROW(TestClass::solve(a,b,c));  \
+    EXPECT_ANY_THROW(TestClass::solve(a,b,c)) << "coeff " << #ARGVARNAME;  \
   }
 
   //act, ASSERT
