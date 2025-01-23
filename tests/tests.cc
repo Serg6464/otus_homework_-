@@ -51,7 +51,7 @@ TEST(DDD, Check2Roots)
 TEST(DDD, Check1Root)
 {
   //arrange
-  double a = 1.0, b = 2.0, c=1.0;
+  double a = 1.0, b = 2.0, c=0.9999999999;
   std::vector <double> etalonVal = {-1.0};
   //act
   auto retVal = TestClass::solve(a,b,c);
