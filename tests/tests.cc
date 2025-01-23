@@ -62,3 +62,13 @@ TEST(DDD, Check1Root)
     EXPECT_DOUBLE_EQ(retVal[i],etalonVal[i]);
   }  
 }
+
+// 9. тест проверяющий что при a=0 exception
+TEST(DDD, CheckException_a_eq_0)
+{
+  //arrange
+  double a = 0.0, b = 0.0, c=1.0;
+  std::vector <double> etalonVal = {};
+  //act, ASSERT
+  EXPECT_ANY_THROW(TestClass::solve(a,b,c));
+}
