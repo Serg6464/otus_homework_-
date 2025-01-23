@@ -17,10 +17,14 @@ int main(int argc, char** argv) {
 Sample class tests
 --------------------------------------------------------------
 */
-// Check reading one int
-TEST(AddingTest, SimpleIntAdd)
+// 3. тест проверяющий что для уравнения x^2-1=0 корней нет
+TEST(solve(1,0,-1), CheckNoRoots)
 {
-  int a = 2, b = 2;
-  auto retVal = TestClass::functionToTest(a,b);
-  EXPECT_EQ(retVal,4);  // 2+2 = 4
+  //arrange
+  double a = 1.0, b = 0.0, c=-1.0;
+  vector <double> etalonVal = {};
+  //act
+  auto retVal = TestClass::solve(a,b);
+  //assert
+  EXPECT_EQ(retVal,etalonVal);  
 }

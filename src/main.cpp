@@ -24,5 +24,5 @@
 int main()
 {
     std::cout << TestClass::getLogo() << std::endl;
-    std::cout << "functionToTest(2,2): " << TestClass::functionToTest(2,2) << std::endl;
+    std::cout << "solve(2,1,0) " << TestClass::solve(2,1,0) << std::endl;
 }

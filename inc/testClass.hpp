@@ -3,32 +3,22 @@
 
 /*
     Define test class that will be unit tested
-           Created by Jakub Nowak 2023.
 */
 #include <string>
+#include <vector>
 
 class TestClass
 {
 public:
-    static int functionToTest(int a, int b)     // Static function with simple add operation
+//нахождение корней квадратного уравнения вида ax^2+bx+c=0
+    static vector <double> solve(double a, double b, double c)     
     {
-        return a + b;
+        return vector<double> {};
     }
 
     static std::string getLogo()
     {
-        const std::string m_logo = R"(
- _____             _     _____         _   
-|   __|___ ___ ___| |___|_   _|___ ___| |_ 
-|  |  | . | . | . | | -_| | | | -_|_ -|  _|
-|_____|___|___|_  |_|___| |_| |___|___|_|  
-              |___|                        
-                                           
- _                 _     _                 
-| |_ ___ _____ ___| |___| |_ ___           
-|  _| -_|     | . | | .'|  _| -_|          
-|_| |___|_|_|_|  _|_|__,|_| |___|          
-              |_|                  
+        const std::string m_logo = R"(OTUS HOMEWORK 1    
     )";
         return m_logo;
     }
